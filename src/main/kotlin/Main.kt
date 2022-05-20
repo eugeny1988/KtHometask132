@@ -8,11 +8,11 @@ val maxDailyPayment = 15_000_000.00
 val maxMonthlyPayment = 60_000_000.00
 val vkMaxDailyPayment = 1_500_000
 val vkMaxMonthlyPayment = 4_000_000
-val pay = 1000.00
+val pay = 200000000.00
 val monthlyPayment = 100000.00
 fun main() {
-    if (!isLimit(masterCard, monthlyPayment, pay)) println("Вы превысили лимит")
-    else println("Комиссия составит ${commission(masterCard, maestro, monthlyPayment, pay)}")
+    if (!isLimit(mir, monthlyPayment, pay)) println("Вы превысили лимит")
+    else println("Комиссия составит ${commission(mir, maestro, monthlyPayment, pay)}")
 }
 
 fun commission(
@@ -42,7 +42,8 @@ fun masterCardCommission(
 }
 
 fun visaMirPayment(pay: Double): Double {
-    return if (pay > 35) 0.0075 * pay
+    val visaMirCommission = 0.0075 * pay
+    return if (visaMirCommission > 35) visaMirCommission
     else 35.00
 }
 

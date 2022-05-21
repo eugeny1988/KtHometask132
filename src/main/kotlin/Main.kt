@@ -3,24 +3,24 @@ val maestro = "Maestro"
 val visa = "Visa"
 val mir = "Мир"
 val vk = "VK Pay"
-val masterCardMaximum = 7000_000.00
+val masterCardMaximum = 7_000_000.00
 val maxDailyPayment = 15_000_000.00
 val maxMonthlyPayment = 60_000_000.00
 val vkMaxDailyPayment = 1_500_000
 val vkMaxMonthlyPayment = 4_000_000
-val pay = 2000.00
-val monthlyPayment = 100000.00
+val pay = 2000_000_0.00
+val monthlyPayment = 0.00
+val dailyPayment = 0.00
+val account = masterCard
 fun main() {
-    if (isLimit(mir, monthlyPayment, pay)) println("Вы превысили лимит")
-    else println("Комиссия составит ${commission(mir, maestro, monthlyPayment, pay)}")
-    println(isLimit(mir, monthlyPayment, pay))
+    if (!isLimit(account)) println("Вы превысили лимит")
+    else println("Комиссия составит ${commission(account, maestro)}")
 }
+
 fun commission(
     sendersAccount: String,
     recipientsAccount: String,
-    monthlyPayment: Double = 0.00,
-    pay: Double
-): Double {
+    ): Double {
     return if (recipientsAccount === vk) {
         0.00
     } else when (sendersAccount) {
@@ -49,11 +49,9 @@ fun visaMirPayment(pay: Double): Double {
 
 fun isLimit(
     sendersAccount: String,
-    monthlyPayment: Double,
-    dailyPayment: Double
 ): Boolean {
     return when (sendersAccount) {
-        vk -> {
+        "VK Pay" -> {
             dailyPayment + pay < vkMaxDailyPayment || monthlyPayment + pay < vkMaxMonthlyPayment
         }
         else -> {

@@ -11,7 +11,7 @@ class MainKtTest {
         val recipientsAccount = "Maestro"
         val expectedValue = 10
         val realCommission = commission(sendersAccount, recipientsAccount)
-        assertEquals(expectedValue, realCommission)
+        assertEquals(10, realCommission)
     }
     @Test
     fun commissionTestTrue(){

@@ -46,7 +46,7 @@ class MainKtTest {
     fun commissionVisa(){
         val recipientsAccount = "Visa"
         val sendersAccount = "VK Pay"
-        val expectedValue = 0.00
+        val expectedValue = 15.00
         val realValue = commission(recipientsAccount,sendersAccount)
         assertEquals(expectedValue, realValue,0.00000001)
     }

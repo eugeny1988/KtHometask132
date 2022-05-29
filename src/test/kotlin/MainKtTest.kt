@@ -9,38 +9,63 @@ class MainKtTest {
     fun commission() {
         val sendersAccount = "MasterCard"
         val recipientsAccount = "Maestro"
-        val expectedValue = 10
+        val expectedValue = 12019.999999999998
         val realCommission = commission(sendersAccount, recipientsAccount)
-        assertEquals(10, realCommission)
+        assertEquals(expectedValue, realCommission, 0.1)
+
     }
     @Test
-    fun commissionTestTrue(){
-        val recipientsAccount = "Maestro"
-        val vk = "VKPay"
-        assertEquals(recipientsAccount === vk, true)
+    fun commissionVKTrue(){
+        val recipientsAccount = "VK Pay"
+        val sendersAccount = "Visa"
+        val expectedValue = 0.00
+        val realValue = commission(recipientsAccount,sendersAccount)
+       assertEquals(expectedValue,realValue,0.00001)
     }
     @Test
-    fun commissionTestFalse(){
-        val recipientsAccount = "Maestro"
-        val vk = "VKPay"
-        assertEquals(recipientsAccount === vk, false)
+    fun commissionVKFalse(){
+
+
+
+    }
+    @Test
+    fun commissionVKPay(){
+        val recipientsAccount = "VK Pay"
+        val sendersAccount = "Maestro"
+        val expectedValue = commission(recipientsAccount,sendersAccount)
+        assertEquals(expectedValue,0.00,0.0000001)
+    }
+    @Test
+    fun commissionMasterCard(){
+        val recipientsAccount = "MasterCard"
+        val sendersAccount = "Maestro"
+        val expectedValue = commission(recipientsAccount,sendersAccount)
+        assertEquals(expectedValue,masterCardCommission(pay),0.0000001)
+    }
+    @Test
+    fun commissionVisa(){
+        val recipientsAccount = "Visa"
+        val sendersAccount = "VK Pay"
+        val expectedValue = 0.00
+        val realValue = commission(recipientsAccount,sendersAccount)
+        assertEquals(expectedValue, realValue,0.00000001)
     }
 
     @Test
     fun masterCardCommission() {
         val pay = 30.00
         val monthlyPayment = 0.00
-        val expectedValue = 150.00
-        val realValue = masterCardCommission(pay,monthlyPayment)
-        assertEquals(expectedValue,realValue)
+        val expectedValue = 0.00
+        val realValue = masterCardCommission(pay, monthlyPayment)
+        assertEquals(expectedValue, realValue, 0.01)
     }
 
     @Test
     fun visaMirPayment() {
         val pay = 100.00
-        val expectedValue = 100.00
+        val expectedValue = 35.00
         val realValue = visaMirPayment(pay)
-        assertEquals(expectedValue, realValue)
+        assertEquals(expectedValue, realValue, 0.1)
     }
 
 

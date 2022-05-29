@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="616712de-7bd4-431e-aa86-fb128aec014c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,9 +103,31 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle test" />
+      <command value="KtHometask132 [jacocoTestReport]" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MainKtTest.commission">
+  <component name="RunManager" selected="Gradle.KtHometask132 [jacocoTestReport]">
+    <configuration name="KtHometask132 [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestCoverageVerification" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="KtHometask132 [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -147,30 +170,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainKtTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;MainKtTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MainKtTest.commission" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainKtTest.commission (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -202,10 +202,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MainKtTest.commission" />
         <item itemvalue="Gradle.KtHometask132 [jacocoTestReport]" />
-        <item itemvalue="Gradle.MainKtTest" />
         <item itemvalue="Gradle.KtHometask132 [test]" />
+        <item itemvalue="Gradle.MainKtTest.commission (1)" />
+        <item itemvalue="Gradle.KtHometask132 [jacocoTestCoverageVerification]" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
@@ -268,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653603182420</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added failed test">
+      <created>1653670679965</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653670679966</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +297,10 @@
     <MESSAGE value="I hope that it's a final commit" />
     <MESSAGE value="Added test" />
     <MESSAGE value="Changed tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed tests" />
+    <MESSAGE value="Added failed test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added failed test" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/KtHometask132$MainKtTest_commission.ic" NAME="MainKtTest.commission Coverage Results" MODIFIED="1653751574547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
